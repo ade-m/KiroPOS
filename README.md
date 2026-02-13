@@ -1,43 +1,52 @@
-# Kiro Demo POS - AI Powered Point of Sale
+# Kiro Demo POS - Spec-Driven Development Showcase
 
-Selamat datang di repositori **Kiro Demo POS**. Proyek ini adalah aplikasi Point of Sale (POS) modern yang dibangun menggunakan **Laravel Filament**, **Docker**, dan **PostgreSQL**.
+![Kiro Demo POS Banner](https://via.placeholder.com/1200x400?text=Kiro+Demo+POS+Spec+Driven+Dev)
 
-Tujuan utama dari repositori ini adalah sebagai **bahan pembelajaran (tutorial)** untuk mendemonstrasikan bagaimana **Kiro** (AWS AI Assistant) dapat digunakan untuk mempercepat pengembangan aplikasi dan membangun fitur asisten AI cerdas di dalam ekosistem Laravel.
+Selamat datang di repositori **Kiro Demo POS**.
 
-## 🚀 Fitur Utama
+Proyek ini adalah demonstrasi nyata penggunaan **Kiro** (AWS AI Assistant) untuk membangun perangkat lunak Point of Sale (POS) yang kompleks menggunakan pendekatan **Spec-Driven Development (SDD)**.
 
-- **Manajemen Produk & Stok**: CRUD produk dengan kategori, harga, dan manajemen inventaris.
-- **Transaksi Kasir (POS)**: Antarmuka kasir yang cepat dan responsif.
-- **Laporan Penjualan**: Visualisasi data penjualan harian/bulanan menggunakan Widget Filament.
-- **AI Assistant Integration**: Contoh integrasi code-assist menggunakan Kiro untuk analisis data.
-- **Full Docker Support**: Aplikasi, Database (PostgreSQL), dan Web Server berjalan sepenuhnya di dalam Docker.
+Aplikasi ini dibangun dari nol dengan menuliskan spesifikasi (Specs) terlebih dahulu, kemudian membiarkan Kiro meng-generate kode, tes, dan struktur database menggunakan stack modern: **Laravel Filament**, **Docker**, dan **PostgreSQL**.
+
+## 🎯 Tujuan Repositori
+
+Repositori ini bukan sekadar source code aplikasi POS, melainkan bahan pembelajaran untuk:
+1.  **Mempraktikkan Spec-Driven Development**: Cara menulis prompt dan spesifikasi yang efektif untuk AI.
+2.  **Workflow AI-First**: Bagaimana Kiro mempercepat pembuatan fitur CRUD, logika transaksi, dan laporan.
+3.  **Modern Stack Deployment**: Menjalankan Laravel & PostgreSQL sepenuhnya di dalam Docker.
+
+## 🚀 Fitur Aplikasi (Hasil Build)
+
+Aplikasi POS yang dihasilkan memiliki fitur:
+- **Manajemen Inventaris**: Produk, Kategori, dan Stok (Laravel Filament Resource).
+- **Kasir / POS**: Halaman transaksi kasir.
+- **Laporan**: Dashboard analitik penjualan harian/bulanan.
+- **Manajemen User**: Role dan permission untuk Kasir dan Admin.
 
 ## 🛠 Teknologi yang Digunakan
 
+- **AI Assistant**: [Kiro](https://kiro.dev/) (Digunakan untuk generate code berdasarkan Specs)
 - **Framework**: [Laravel 11](https://laravel.com/)
 - **Admin Panel**: [FilamentPHP v3](https://filamentphp.com/)
 - **Database**: PostgreSQL 16 (Running in Docker)
 - **Containerization**: Docker & Docker Compose
-- **AI Tool**: [Kiro](https://kiro.dev/) (AWS AI Assistant / Agentic IDE)
 
 ---
 
 ## 📋 Langkah-Langkah Persiapan (Prerequisites)
 
-Sebelum memulai, pastikan perangkat Anda telah memenuhi persyaratan berikut.
+**PENTING**: Karena proyek ini berbasis Docker, Anda **TIDAK PERLU** menginstall PHP, Composer, atau PostgreSQL di komputer lokal (Host) Anda.
 
-**PENTING**: Anda **TIDAK PERLU** menginstall PHP, Composer, atau PostgreSQL secara manual di komputer Anda. Semua akan dijalankan melalui Docker untuk menjamin konsistensi lingkungan pengembangan.
-
-1.  **Docker Desktop**: Wajib diinstal dan dalam keadaan berjalan (Running). [Download di sini](https://www.docker.com/products/docker-desktop/).
+1.  **Docker Desktop**: Wajib diinstal dan dalam keadaan berjalan (Running).
 2.  **Git**: Untuk melakukan kloning repositori.
-3.  **Kiro IDE**: Disarankan menggunakan editor Kiro untuk mengikuti tutorial AI Assistant secara maksimal. [Download Kiro](https://kiro.dev/).
-4.  **AWS Builder ID**: Diperlukan untuk login ke Kiro (Gratis).
+3.  **Kiro IDE**: Sangat disarankan menggunakan editor Kiro untuk mempelajari *prompt history* dan *specs* yang digunakan.
+4.  **AWS Builder ID**: Untuk login ke Kiro.
 
 ---
 
-## ⚙️ Instalasi & Konfigurasi
+## ⚙️ Instalasi & Menjalankan Proyek
 
-Ikuti langkah-langkah berikut secara berurutan di terminal (Terminal Kiro atau CMD/Terminal biasa):
+Ikuti langkah-langkah berikut di terminal Anda:
 
 ### 1. Clone Repositori
 ```bash
@@ -111,3 +120,8 @@ Buka browser Anda dan akses:
 Halaman Utama: http://localhost
 
 Dashboard Admin: http://localhost/admin
+
+📚 Mempelajari Spec-Driven Development
+Untuk memahami bagaimana kode ini dibuat oleh Kiro:
+1. Cek folder specs/ (jika disertakan) untuk melihat file markdown spesifikasi.
+2. Perhatikan struktur kode yang dihasilkan oleh Kiro di app/Filament/Resources.
