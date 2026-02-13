@@ -62,7 +62,7 @@ DB_USERNAME=sail
 DB_PASSWORD=password
 ```
 
-###3. Instalasi Dependensi (Composer) via Docker
+### 3. Instalasi Dependensi (Composer) via Docker
 
 Karena kita tidak menggunakan Composer di komputer lokal, kita akan memerintahkan Docker untuk menjalankannya.
 
@@ -74,7 +74,7 @@ docker compose run --rm laravel.test composer install
 ```
 Catatan: Langkah ini mungkin memakan waktu beberapa menit tergantung koneksi internet.
 
-###4. Menjalankan Aplikasi
+### 4. Menjalankan Aplikasi
 
 Setelah folder vendor terbentuk, jalankan seluruh service (App & Database):
 
@@ -83,7 +83,7 @@ docker compose up -d
 ```
 Pastikan semua container berjalan dengan mengetik docker compose ps.
 
-###5. Setup Database & Aplikasi
+### 5. Setup Database & Aplikasi
 
 Jalankan perintah-perintah Laravel berikut di dalam container agar terhubung ke PostgreSQL:
 
@@ -99,7 +99,7 @@ docker compose exec laravel.test php artisan db:seed
 
 # 4. Link Storage (Agar gambar produk dapat diakses publik)
 docker compose exec laravel.test php artisan storage:link
-6. Membuat Akun Admin Filament
+### 6. Membuat Akun Admin Filament
 ```
 Buat user untuk login ke dashboard admin:
 ```bash
@@ -107,7 +107,7 @@ docker compose exec laravel.test php artisan filament:user
 Ikuti instruksi di layar untuk memasukkan Nama, Email, dan Password.
 ```
 
-###7. Akses Aplikasi
+### 7. Akses Aplikasi
 
 Buka browser Anda dan akses:
 
